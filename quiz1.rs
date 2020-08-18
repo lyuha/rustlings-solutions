@@ -8,10 +8,10 @@
 // the price of an order of apples given the order amount. No hints this time!
 
 // Put your function here!
-fn calculate_apple_price(count: i32) -> i32 { 
+fn calculate_apple_price(count: i32) -> i32 {
     if count > 40 {
         count
-    } else { 
+    } else {
         count * 2
     }
 }

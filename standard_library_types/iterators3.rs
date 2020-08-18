@@ -29,8 +29,10 @@ pub fn divide(a: i32, b: i32) -> Result<i32, DivisionError> {
     if a % b == 0 {
         Ok(a / b)
     } else {
-        Err(DivisionError::NotDivisible(NotDivisibleError{ dividend
-            : a, divisor: b }))
+        Err(DivisionError::NotDivisible(NotDivisibleError {
+            dividend: a,
+            divisor: b,
+        }))
     }
 }
 
@@ -78,7 +80,7 @@ mod tests {
     fn list_of_results() {
         let numbers = vec![27, 297, 38502, 81];
         let division_results = numbers.into_iter().map(|n| divide(n, 27));
-        let x: Vec<Result<i32,DivisionError>> = division_results.collect();
+        let x: Vec<Result<i32, DivisionError>> = division_results.collect();
         assert_eq!(format!("{:?}", x), "[Ok(1), Ok(11), Ok(1426), Ok(3)]");
     }
 }

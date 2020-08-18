@@ -12,7 +12,7 @@ mod tests {
     fn you_can_assert() {
         assert!(true);
     }
-    
+
     #[test]
     #[should_panic]
     fn fail() {

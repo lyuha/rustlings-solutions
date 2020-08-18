@@ -16,7 +16,11 @@ impl Package {
             // Something goes here...
             panic!("Weights is impossible");
         } else {
-            return Package {sender_country, recipient_country, weight_in_grams};
+            return Package {
+                sender_country,
+                recipient_country,
+                weight_in_grams,
+            };
         }
     }
 
@@ -48,7 +52,7 @@ mod tests {
     fn create_international_package() {
         let sender_country = String::from("Spain");
         let recipient_country = String::from("Russia");
-        
+
         let package = Package::new(sender_country, recipient_country, 1200);
 
         assert!(package.is_international());
@@ -60,9 +64,9 @@ mod tests {
         let recipient_country = String::from("Spain");
 
         let cents_per_kg = 3;
-        
+
         let package = Package::new(sender_country, recipient_country, 1500);
-        
+
         assert_eq!(package.get_fees(cents_per_kg), 4500);
     }
 }

@@ -2,7 +2,7 @@
 // Basically, this is the same as From. The main difference is that this should return a Result type
 // instead of the target type itself.
 // You can read more about it at https://doc.rust-lang.org/std/convert/trait.TryFrom.html
-use std::convert::{TryInto, TryFrom};
+use std::convert::{TryFrom, TryInto};
 
 #[derive(Debug)]
 struct Color {
@@ -25,9 +25,9 @@ impl TryFrom<(i16, i16, i16)> for Color {
     type Error = String;
     fn try_from(tuple: (i16, i16, i16)) -> Result<Self, Self::Error> {
         let range = 0..=255;
-        
+
         if range.contains(&tuple.0) && range.contains(&tuple.1) && range.contains(&tuple.2) {
-            Ok(Color{
+            Ok(Color {
                 red: tuple.0 as u8,
                 green: tuple.1 as u8,
                 blue: tuple.2 as u8,
@@ -47,7 +47,11 @@ impl TryFrom<[i16; 3]> for Color {
                 return Err("Out of color range".to_string());
             }
         }
-        Ok(Color { red: arr[0] as u8, green: arr[1] as u8, blue: arr[2] as u8 })
+        Ok(Color {
+            red: arr[0] as u8,
+            green: arr[1] as u8,
+            blue: arr[2] as u8,
+        })
     }
 }
 

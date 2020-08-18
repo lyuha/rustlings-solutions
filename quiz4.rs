@@ -7,7 +7,7 @@
 
 macro_rules! my_macro {
     ($e:expr) => {
-        format!("Hello {}", $e) 
+        format!("Hello {}", $e)
     };
 }
 

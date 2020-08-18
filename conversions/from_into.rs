@@ -34,17 +34,17 @@ impl Default for Person {
 // Otherwise, then return an instantiated Person object with the results
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
-        if s.is_empty() { 
+        if s.is_empty() {
             return Person::default();
         }
         let slices: Vec<&str> = s.split(',').collect();
         if slices.len() == 2 && !slices[0].is_empty() && !slices[1].is_empty() {
             match slices[1].parse::<usize>() {
-                Ok(n) => { Person {
+                Ok(n) => Person {
                     name: slices[0].to_string(),
-                    age: n
-                }},
-                Err(_) => { Person::default() },
+                    age: n,
+                },
+                Err(_) => Person::default(),
             }
         } else {
             Person::default()

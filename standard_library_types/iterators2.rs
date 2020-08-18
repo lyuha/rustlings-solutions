@@ -7,7 +7,6 @@
 //         Try to ensure it returns a single string.
 // As always, there are hints if you execute `rustlings hint iterators2`!
 
-
 pub fn capitalize_first(input: &str) -> String {
     let mut c = input.chars();
     match c.next() {
@@ -43,7 +42,10 @@ mod tests {
     #[test]
     fn test_iterate_into_string() {
         let words = vec!["hello", " ", "world"];
-        let capitalized_words = words.iter().map(|e| capitalize_first(e)).collect::<String>();
+        let capitalized_words = words
+            .iter()
+            .map(|e| capitalize_first(e))
+            .collect::<String>();
         assert_eq!(capitalized_words, "Hello World");
     }
 }
