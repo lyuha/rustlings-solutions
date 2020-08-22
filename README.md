@@ -20,7 +20,7 @@ Solutions for [Rustlings](https://github.com/rust-lang/rustlings) [v4.0.0](https
   - [x] [functions3.rs](./functions/functions3.rs)
   - [x] [functions4.rs](./functions/functions4.rs)
   - [x] [functions5.rs](./functions/functions5.rs)
-- [x] quiz1.rs
+- [x] [quiz1.rs](./quiz1.rs)
 - [x] [primitive_types](./primitive_types)
   - [x] [primitive_types1.rs](./primitive_types/primitive_types1.rs)
   - [x] [primitive_types2.rs](./primitive_types/primitive_types2.rs)
@@ -34,7 +34,7 @@ Solutions for [Rustlings](https://github.com/rust-lang/rustlings) [v4.0.0](https
   - [x] [structs3.rs](./structs/structs3.rs)
   - [x] [strings1.rs](./strings/strings1.rs)
   - [x] [strings2.rs](./strings/strings2.rs)
-- [x] quiz2.rs
+- [x] [quiz2.rs](./quiz2.rs)
 - [x] [enums](./enums/)
   - [x] [enums1.rs](./enums/enums1.rs)
   - [x] [enums2.rs](./enums/enums2.rs)
@@ -43,7 +43,7 @@ Solutions for [Rustlings](https://github.com/rust-lang/rustlings) [v4.0.0](https
   - [x] [tests1.rs](./tests/tests1.rs)
   - [x] [tests2.rs](./tests/tests2.rs)
   - [x] [tests3.rs](./tests/tests3.rs)
-- [x] quiz3.rs
+- [x] [quiz3.rs](./quiz3.rs)
 - [x] [modules](./modules/)
   - [x] [modules1.rs](./modules/modules1.rs)
   - [x] [modules2.rs](./modules/modules2.rs)
@@ -52,7 +52,7 @@ Solutions for [Rustlings](https://github.com/rust-lang/rustlings) [v4.0.0](https
   - [x] [macros2.rs](./macros/macros2.rs)
   - [x] [macros3.rs](./macros/macros3.rs)
   - [x] [macros4.rs](./macros/macros4.rs)
-- [x] quiz4.rs
+- [x] [quiz4.rs](./quiz4.rs)
 - [x] [move_semantics](./move_semantics/)
   - [x] [move_semantics1.rs](./move_semantics/move_semantics1.rs)
   - [x] [move_semantics2.rs](./move_semantics/move_semantics2.rs)
