@@ -8,10 +8,4 @@ mod tests {
     fn you_can_assert_eq() {
         assert_eq!(0, 0);
     }
-
-    #[test]
-    #[should_panic]
-    fn panic_assert_eq() {
-        assert_eq!(0, 1);
-    }
 }

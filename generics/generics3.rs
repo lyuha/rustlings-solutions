@@ -4,27 +4,22 @@
 // However, the school also issues alphabetical grades (A+ -> F-) and needs
 // to be able to print both types of report card!
 
-// Make the necessary code changes to support alphabetical report cards, thereby making
-// the second test pass.
+// Make the necessary code changes in the struct ReportCard and the impl block
+// to support alphabetical report cards. Change the Grade in the second test to "A+"
+// to show that your changes allow alphabetical grades.
 
-pub struct ReportCard<T>
-where
-    T: std::fmt::Display,
-{
+// Execute 'rustlings hint generics3' for hints!
+
+pub struct ReportCard<T> where T: std::fmt::Display {
     pub grade: T,
     pub student_name: String,
     pub student_age: u8,
 }
 
-impl<T> ReportCard<T>
-where
-    T: std::fmt::Display,
-{
+impl<T: std::fmt::Display> ReportCard<T> {
     pub fn print(&self) -> String {
-        format!(
-            "{} ({}) - achieved a grade of {}",
-            &self.student_name, &self.student_age, &self.grade
-        )
+        format!("{} ({}) - achieved a grade of {}",
+            &self.student_name, &self.student_age, &self.grade)
     }
 }
 
@@ -47,7 +42,6 @@ mod tests {
 
     #[test]
     fn generate_alphabetic_report_card() {
-        // TODO: Make sure to change the grade here after you finish the exercise.
         let report_card = ReportCard {
             grade: "A+",
             student_name: "Gary Plotter".to_string(),

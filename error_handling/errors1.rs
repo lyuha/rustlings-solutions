@@ -4,7 +4,6 @@
 // was, instead of just sometimes returning `None`. The 2nd test currently
 // does not compile or pass, but it illustrates the behavior we would like
 // this function to have.
-//
 // Execute `rustlings hint errors1` for hints!
 
 pub fn generate_nametag_text(name: String) -> Result<String, String> {
@@ -12,7 +11,7 @@ pub fn generate_nametag_text(name: String) -> Result<String, String> {
         Ok(format!("Hi! My name is {}", name))
     } else {
         // Empty names aren't allowed.
-        Err(String::from("`name` was empty; it must be nonempty."))
+        Err("`name` was empty; it must be nonempty.".into())
     }
 }
 

@@ -18,7 +18,7 @@
 
 #[derive(PartialEq, Debug)]
 pub enum List {
-    Cons(i32, Option<Box<List>>),
+    Cons(i32, Box<List>),
     Nil,
 }
 
@@ -35,7 +35,7 @@ pub fn create_empty_list() -> List {
 }
 
 pub fn create_non_empty_list() -> List {
-    List::Cons(0, None)
+    List::Cons(0, Box::new(List::Nil))
 }
 
 #[cfg(test)]
